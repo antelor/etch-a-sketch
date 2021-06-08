@@ -1,0 +1,38 @@
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before
+::after{
+    box-sizing: inherit;
+}
+
+.mainContainer{
+    width: 500px;
+    height: 500px;
+    display:grid;
+    grid-template-columns: repeat(16, 16fr);
+    grid-gap: 5px;
+    margin:auto;
+
+    background-color: lightblue;
+    padding:5% 15% 2em;
+}
+
+.gridItem{
+    border: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+    width: auto;
+}
+
+.resetButton{
+    display:flex;
+    margin:auto;
+}
+
+.drawnItem{
+    background-color: green;
+}
