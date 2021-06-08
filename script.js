@@ -11,7 +11,9 @@ createGrid = (size = 16) => {
 }
 
 mouseHover = (e) => {
-    e.target.classList.add('drawnItem');
+    if(color=='green') e.target.classList.add('drawnItemGreen');
+    if(color=='red') e.target.classList.add('drawnItemRed');
+    if(color=='blue') e.target.classList.add('drawnItemBlue');
 }
 
 resetGrid = () => {
@@ -32,10 +34,30 @@ resetGrid = () => {
     createGrid(gridSize);
 }
 
+greenClr = () => {
+    color='green';
+}
+
+redClr = () => {
+    color='red';
+}
+
+blueClr = () => {
+    color='blue';
+}
+
 const mainContainer = document.querySelector('[class=mainContainer]');
 const resetButton = document.querySelector('[class=resetButton');
+const greenBtn = document.querySelector('[class=greenBtn');
+const redBtn = document.querySelector('[class=redBtn');
+const blueBtn = document.querySelector('[class=blueBtn');
+
+let color = 'green';
 
 createGrid();
 
 resetButton.addEventListener('click', resetGrid);
+greenBtn.addEventListener('click', greenClr);
+redBtn.addEventListener('click', redClr);
+blueBtn.addEventListener('click', blueClr);
 

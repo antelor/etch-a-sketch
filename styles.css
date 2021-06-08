@@ -8,22 +8,52 @@
     box-sizing: inherit;
 }
 
+body{
+    background-color: lightsalmon;
+}
+
+.everything{
+    width: 700px;
+    height: 650px;
+    background-color: lightblue;
+    margin:auto;
+}
+
+.title{
+    text-align: center;
+    padding:1em;
+    background-color: lightcyan;
+}
+
 .mainContainer{
     width: 500px;
     height: 500px;
     display:grid;
     grid-template-columns: repeat(16, 16fr);
-    grid-gap: 5px;
+    grid-gap: 0px;
     margin:auto;
+    border: 1px solid black;
+}
 
-    background-color: lightblue;
-    padding:5% 15% 2em;
+.buttonMenu{
+    width: auto;
+    position: relative;
+    right:2em;
+}
+
+.board{
+    width:80%;
+    margin:auto;
+    display:flex;
+    flex-wrap: wrap;
+    display:grid;
+    grid-template-columns: 10% 90%;
 }
 
 .gridItem{
-    border: 1px solid black;
-    padding: 0px;
-    margin: 0px;
+    border: 0.5px solid black;
+    padding: 0;
+    margin: 0;
     height: auto;
     width: auto;
 }
@@ -33,6 +63,14 @@
     margin:auto;
 }
 
-.drawnItem{
+.drawnItemGreen{
     background-color: green;
+}
+
+.drawnItemRed{
+    background-color: red;
+}
+
+.drawnItemBlue{
+    background-color: blue;
 }
